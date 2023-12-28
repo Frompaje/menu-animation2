@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    min-height: 100vh;
+    background: #154367;
+}
+
+.navigation {
+    position: absolute;
+    top: 155px;
+    left: 400px;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    z-index: 10000;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: width 0.5s, height 0.5s;
+    transition-delay: 0s, 0.75s;
+}
+
+.navigation.active {
+    width: 250px;
+    height: 350px;
+    transition: height 0.5s, width 0.5s;
+    transition-delay: 0s, 0.75s;
+}
+
+.navigation .menuToggle {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #ff4081;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.navigation .menuToggle.active {
+    background-color: #2196f3;
+}
+
+.navigation .menuToggle.active::before {
+    transform: rotate(315deg);
+}
+
+.navigation .menuToggle::before {
+    content: "+";
+    position: absolute;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 50px;
+    height: 50px;
+    font-family: 400;
+    transition: .5s;
+}
+
+.navigation ul {
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+.navigation ul li {
+    position: relative;
+    width: 100%;
+}
+
+.navigation ul li:hover {
+    background: #54bdee;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: flex;
+    width: 100%;
+    color: #154367;
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.navigation ul li a .icon i {
+    font-size: 1.5rem;
+    color: #154367;
+}
+
+.navigation ul li a .tittle {
+    position: relative;
+    display: block;
+    line-height: 40px;
+    white-space: nowrap;
+}
+
+.navigation ul li:hover a .tittle {
+    color: white;
+}
